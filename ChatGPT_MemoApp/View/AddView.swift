@@ -6,20 +6,42 @@
 //
 
 import SwiftUI
+import OpenAISwift
 
 struct AddView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentation
-    @State private var title: String = ""
-    @State private var content: String = ""
+    @State private var title = ""
+    @State private var content = ""
+    @State private var gptArray: [String] = []
+    private var client = OpenAISwift(authToken: "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")
     
     var body: some View {
         VStack {
             TextField("タイトル", text: $title)
                 .font(.title)
-            TextEditor(text: $content)
-                .font(.body)
-            Spacer()
+            
+            ScrollView {
+                ForEach(gptArray, id: \.self) { message in
+                    Text(message)
+                    Spacer()
+                }
+                
+                
+                
+                HStack {
+                    TextField("質問を入力", text: $content)
+                        .padding()
+                        .background(Color.gray.opacity(0.5))
+                        .padding()
+                        .font(.body)
+                        
+                    Button("送信") {
+                        send()
+                    }
+                }
+                Spacer()
+            }
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -31,6 +53,26 @@ struct AddView: View {
         }
     }
     
+    //ChatGPTで回答を表示する関数
+    func send() {
+        guard !content.trimmingCharacters(in: .whitespaces).isEmpty else { return }
+        gptArray.append("person: \(content)")
+        client.sendCompletion(with: content, maxTokens: 500, completionHandler: {result in
+                switch result {
+                    case .success(let model):
+                        DispatchQueue.main.async {
+                            let output = model.choices.first?.text ?? ""
+                            self.gptArray.append("ChatGPT: \(output)")
+                            self.content = ""
+                    }
+                    case .failure:
+                        break
+                }
+            })
+    }
+    
+    
+    //データを保存する関数
     private func addChat() {
         let chat = Chat(context: viewContext)
         chat.title = title

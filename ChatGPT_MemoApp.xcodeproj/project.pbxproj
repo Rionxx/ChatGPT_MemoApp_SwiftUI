@@ -13,6 +13,7 @@
 		EA6C80F229CAD9EF0033E434 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80F129CAD9EF0033E434 /* HomeView.swift */; };
 		EA6C80F429CADA530033E434 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80F329CADA530033E434 /* Persistence.swift */; };
 		EA6C80F629CADDB40033E434 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80F529CADDB40033E434 /* AddView.swift */; };
+		EA6C80F929CAE4B20033E434 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = EA6C80F829CAE4B20033E434 /* OpenAISwift */; };
 		EAB51A2429CAD3EA00D51859 /* ChatGPT_MemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB51A2329CAD3EA00D51859 /* ChatGPT_MemoAppApp.swift */; };
 		EAB51A2B29CAD3EA00D51859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB51A2A29CAD3EA00D51859 /* ContentView.swift */; };
 		EAB51A2D29CAD3F100D51859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB51A2C29CAD3F100D51859 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6C80F929CAE4B20033E434 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +113,9 @@
 			dependencies = (
 			);
 			name = ChatGPT_MemoApp;
+			packageProductDependencies = (
+				EA6C80F829CAE4B20033E434 /* OpenAISwift */,
+			);
 			productName = ChatGPT_MemoApp;
 			productReference = EAB51A2029CAD3EA00D51859 /* ChatGPT_MemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +144,9 @@
 				Base,
 			);
 			mainGroup = EAB51A1729CAD3EA00D51859;
+			packageReferences = (
+				EA6C80F729CAE4B20033E434 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = EAB51A2129CAD3EA00D51859 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -382,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA6C80F729CAE4B20033E434 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA6C80F829CAE4B20033E434 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA6C80F729CAE4B20033E434 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EA6C80E729CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodeld */ = {
