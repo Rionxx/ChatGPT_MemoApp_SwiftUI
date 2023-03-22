@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ChatGPT_MemoAppApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

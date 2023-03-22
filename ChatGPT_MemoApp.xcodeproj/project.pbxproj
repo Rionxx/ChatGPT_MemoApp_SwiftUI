@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA6C80E929CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80E729CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodeld */; };
+		EA6C80EC29CAD8EE0033E434 /* Chat+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80EA29CAD8EE0033E434 /* Chat+CoreDataClass.swift */; };
+		EA6C80ED29CAD8EE0033E434 /* Chat+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80EB29CAD8EE0033E434 /* Chat+CoreDataProperties.swift */; };
+		EA6C80F229CAD9EF0033E434 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80F129CAD9EF0033E434 /* HomeView.swift */; };
+		EA6C80F429CADA530033E434 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80F329CADA530033E434 /* Persistence.swift */; };
+		EA6C80F629CADDB40033E434 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6C80F529CADDB40033E434 /* AddView.swift */; };
 		EAB51A2429CAD3EA00D51859 /* ChatGPT_MemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB51A2329CAD3EA00D51859 /* ChatGPT_MemoAppApp.swift */; };
-		EAB51A2629CAD3EA00D51859 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB51A2529CAD3EA00D51859 /* Persistence.swift */; };
-		EAB51A2929CAD3EA00D51859 /* ChatGPT_MemoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAB51A2729CAD3EA00D51859 /* ChatGPT_MemoApp.xcdatamodeld */; };
 		EAB51A2B29CAD3EA00D51859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB51A2A29CAD3EA00D51859 /* ContentView.swift */; };
 		EAB51A2D29CAD3F100D51859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB51A2C29CAD3F100D51859 /* Assets.xcassets */; };
 		EAB51A3129CAD3F100D51859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB51A3029CAD3F100D51859 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA6C80E829CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatGPT_MemoApp.xcdatamodel; sourceTree = "<group>"; };
+		EA6C80EA29CAD8EE0033E434 /* Chat+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Chat+CoreDataClass.swift"; path = "ChatGPT_MemoApp/Chat+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EA6C80EB29CAD8EE0033E434 /* Chat+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Chat+CoreDataProperties.swift"; path = "ChatGPT_MemoApp/Chat+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EA6C80F129CAD9EF0033E434 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EA6C80F329CADA530033E434 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EA6C80F529CADDB40033E434 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		EAB51A2029CAD3EA00D51859 /* ChatGPT_MemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT_MemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB51A2329CAD3EA00D51859 /* ChatGPT_MemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT_MemoAppApp.swift; sourceTree = "<group>"; };
-		EAB51A2529CAD3EA00D51859 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		EAB51A2829CAD3EA00D51859 /* ChatGPT_MemoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatGPT_MemoApp.xcdatamodel; sourceTree = "<group>"; };
 		EAB51A2A29CAD3EA00D51859 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EAB51A2C29CAD3F100D51859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAB51A2E29CAD3F100D51859 /* ChatGPT_MemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatGPT_MemoApp.entitlements; sourceTree = "<group>"; };
@@ -37,9 +45,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA6C80EE29CAD9CD0033E434 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAB51A2A29CAD3EA00D51859 /* ContentView.swift */,
+				EA6C80F129CAD9EF0033E434 /* HomeView.swift */,
+				EA6C80F529CADDB40033E434 /* AddView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EAB51A1729CAD3EA00D51859 = {
 			isa = PBXGroup;
 			children = (
+				EA6C80EA29CAD8EE0033E434 /* Chat+CoreDataClass.swift */,
+				EA6C80EB29CAD8EE0033E434 /* Chat+CoreDataProperties.swift */,
 				EAB51A2229CAD3EA00D51859 /* ChatGPT_MemoApp */,
 				EAB51A2129CAD3EA00D51859 /* Products */,
 			);
@@ -57,11 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				EAB51A2329CAD3EA00D51859 /* ChatGPT_MemoAppApp.swift */,
-				EAB51A2529CAD3EA00D51859 /* Persistence.swift */,
-				EAB51A2A29CAD3EA00D51859 /* ContentView.swift */,
+				EA6C80F329CADA530033E434 /* Persistence.swift */,
+				EA6C80EE29CAD9CD0033E434 /* View */,
 				EAB51A2C29CAD3F100D51859 /* Assets.xcassets */,
 				EAB51A2E29CAD3F100D51859 /* ChatGPT_MemoApp.entitlements */,
-				EAB51A2729CAD3EA00D51859 /* ChatGPT_MemoApp.xcdatamodeld */,
+				EA6C80E729CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodeld */,
 				EAB51A2F29CAD3F100D51859 /* Preview Content */,
 			);
 			path = ChatGPT_MemoApp;
@@ -146,9 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB51A2429CAD3EA00D51859 /* ChatGPT_MemoAppApp.swift in Sources */,
-				EAB51A2629CAD3EA00D51859 /* Persistence.swift in Sources */,
+				EA6C80E929CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodeld in Sources */,
+				EA6C80EC29CAD8EE0033E434 /* Chat+CoreDataClass.swift in Sources */,
+				EA6C80F429CADA530033E434 /* Persistence.swift in Sources */,
+				EA6C80F629CADDB40033E434 /* AddView.swift in Sources */,
+				EA6C80F229CAD9EF0033E434 /* HomeView.swift in Sources */,
+				EA6C80ED29CAD8EE0033E434 /* Chat+CoreDataProperties.swift in Sources */,
 				EAB51A2B29CAD3EA00D51859 /* ContentView.swift in Sources */,
-				EAB51A2929CAD3EA00D51859 /* ChatGPT_MemoApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,12 +384,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EAB51A2729CAD3EA00D51859 /* ChatGPT_MemoApp.xcdatamodeld */ = {
+		EA6C80E729CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EAB51A2829CAD3EA00D51859 /* ChatGPT_MemoApp.xcdatamodel */,
+				EA6C80E829CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodel */,
 			);
-			currentVersion = EAB51A2829CAD3EA00D51859 /* ChatGPT_MemoApp.xcdatamodel */;
+			currentVersion = EA6C80E829CAD89F0033E434 /* ChatGPT_MemoApp.xcdatamodel */;
 			path = ChatGPT_MemoApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
