@@ -14,7 +14,7 @@ struct AddView: View {
     @State private var title = ""
     @State private var content = ""
     @State private var gptArray: [String] = []
-    private var client = OpenAISwift(authToken: "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")
+    private var client = OpenAISwift(authToken: "APIキーを入力")
     
     var body: some View {
         VStack {
